@@ -10,6 +10,7 @@ import "non.geist";
 import "non.geist/mono";
 import tailwindStylesheetUrl from "~/tailwind.css?url";
 import { RouteErrorDisplay } from "./components/ErrorDisplay";
+import { GlobalShortcuts } from "./components/GlobalShortcuts";
 import { StaleAssetRecovery } from "./components/StaleAssetRecovery";
 import { AppContainer, MainCenteredContainer } from "./components/layout/AppLayout";
 import { ShortcutsProvider } from "./components/primitives/ShortcutsProvider";
@@ -142,6 +143,7 @@ export default function App() {
         <body className="h-full overflow-hidden bg-background-dimmed antialiased">
           <ShortcutsProvider>
             <TimezoneSetter />
+            <GlobalShortcuts />
             <Outlet />
             <Toast />
           </ShortcutsProvider>
